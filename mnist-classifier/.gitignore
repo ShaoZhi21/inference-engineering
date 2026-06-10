@@ -1,0 +1,16 @@
+# Downloaded datasets & models — never commit
+data/
+models/
+
+# PyTorch checkpoints / trained weights
+*.pt
+*.pth
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Notebook checkpoints
+.ipynb_checkpoints/

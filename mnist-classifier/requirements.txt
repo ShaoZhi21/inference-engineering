@@ -1,0 +1,10 @@
+# Install with:  pip install -r requirements.txt
+# (On a Mac without a GPU, the default CPU build of torch is fine for MNIST.)
+
+torch
+torchvision
+matplotlib
+
+# For the Hugging Face path (section 6) — the ecosystem the rest of the ramp uses
+datasets
+huggingface_hub
