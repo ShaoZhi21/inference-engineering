@@ -27,9 +27,12 @@ The model is a simple feed-forward neural network:
 - Linear: 128 -> 10
 - Output: digit class logits for labels 0-9
 
-The uploaded `hf_mnist_net.pt` file is a PyTorch `state_dict`, not a full Hugging
-Face Transformers model package. To use it, recreate the same model architecture
-and then load the state dict.
+The uploaded checkpoint files are PyTorch `state_dict` files, not a full Hugging
+Face Transformers model package. To use either one, recreate the same model
+architecture and then load the state dict.
+
+- `hf_mnist_net.pt`: original fp32 model weights
+- `hf_mnist_net_int8.pt`: dynamically quantized int8 model weights
 
 ## Dataset
 
@@ -43,7 +46,16 @@ transforms.Normalize((0.1307,), (0.3081,))
 
 ## Results
 
-Local test accuracy after 5 epochs was approximately 97%.
+Local test results:
+
+| Checkpoint | Accuracy | Size |
+|---|---:|---:|
+| `hf_mnist_net.pt` | 0.9775 | 400.0 KB |
+| `hf_mnist_net_int8.pt` | 0.9778 | 103.6 KB |
+
+The int8 checkpoint was created with PyTorch dynamic quantization on the `Linear`
+layers. The tiny accuracy difference is not meaningful; the useful result is that
+the model became smaller while accuracy stayed effectively unchanged.
 
 ## Usage
 
@@ -73,6 +85,9 @@ state_dict = torch.load("hf_mnist_net.pt", map_location="cpu")
 model.load_state_dict(state_dict)
 model.eval()
 ```
+
+To load the quantized checkpoint, use `hf_mnist_net_int8.pt` with the quantized
+model structure produced by the local `src/quantize.py` script.
 
 ## Limitations
 
