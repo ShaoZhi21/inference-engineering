@@ -6,7 +6,7 @@ from torch.nn import functional as F
 BATCH_SIZE = 4
 BLOCK_SIZE = 8
 LEARNING_RATE = 1e-2
-MAX_ITERS = 1000
+MAX_ITERS = 10000
 EVAL_INTERVAL = 100
 EVAL_ITERS = 20
 
