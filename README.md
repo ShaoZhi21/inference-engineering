@@ -10,6 +10,18 @@
 
 ---
 
+## Progress
+
+**Week 0 complete:** built the MNIST classifier in PyTorch, swapped the data path to Hugging Face, practiced Hub CLI download/upload, saved PyTorch checkpoints, uploaded the model card, and completed the fp32 → int8 quantization stretch.
+
+- Project: `mnist-classifier`
+- Hub repo: `shaozhi21/mnist-classifier`
+- fp32 checkpoint: `hf_mnist_net.pt` — accuracy 0.9775, size 400.0 KB
+- int8 checkpoint: `hf_mnist_net_int8.pt` — accuracy 0.9778, size 103.6 KB
+- Next: Week 1, transformer fundamentals via Karpathy nanoGPT. See `WEEK1.md`.
+
+---
+
 ## Theme 0 — Starters: PyTorch fundamentals + a number classifier
 
 Why: you can't reason about an inference bottleneck or read vLLM/TRL/nanoGPT code if the basic PyTorch loop is unfamiliar. This is the on-ramp everything else stands on. It's the *one* place toy ML is the right call — get a working win, build muscle memory, move on.
