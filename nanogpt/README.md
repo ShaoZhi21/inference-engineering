@@ -37,7 +37,7 @@ But use it carefully. The repo is described as a simple, fast training/finetunin
 Recommended layout:
 
 ```text
-week1-nanogpt/
+nanogpt/
   README.md
   input.txt
   bigram.py
@@ -52,8 +52,8 @@ Keep this separate from `mnist-classifier`.
 From the repo root:
 
 ```bash
-mkdir -p week1-nanogpt
-cd week1-nanogpt
+mkdir -p nanogpt
+cd nanogpt
 ```
 
 Use the existing top-level virtual environment if it already has PyTorch:
@@ -84,7 +84,7 @@ Use a tiny text file first. Karpathy uses Tiny Shakespeare.
 The file should be:
 
 ```text
-week1-nanogpt/input.txt
+nanogpt/input.txt
 ```
 
 At this stage the dataset is just raw text. You will build a character vocabulary:
@@ -356,8 +356,8 @@ Compare:
 By the end of Week 1, produce:
 
 ```text
-week1-nanogpt/gpt.py
-week1-nanogpt/notes.md
+nanogpt/gpt.py
+nanogpt/notes.md
 ```
 
 `gpt.py` should:

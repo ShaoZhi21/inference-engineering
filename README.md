@@ -18,7 +18,7 @@
 - Hub repo: `shaozhi21/mnist-classifier`
 - fp32 checkpoint: `hf_mnist_net.pt` — accuracy 0.9775, size 400.0 KB
 - int8 checkpoint: `hf_mnist_net_int8.pt` — accuracy 0.9778, size 103.6 KB
-- Next: Week 1, transformer fundamentals via Karpathy nanoGPT. See `WEEK1.md`.
+- Next: Week 1, transformer fundamentals via Karpathy nanoGPT. See `nanogpt/README.md`.
 
 ---
 
